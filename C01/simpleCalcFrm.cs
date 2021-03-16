@@ -51,18 +51,19 @@ namespace C01
 
             counterOp += 1;
             op1TxtBox.Focus();
-            op1TxtBox.SelectAll();
-            op2TxtBox.SelectAll();
+            op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
         
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            op1TxtBox.Clear();
-            op2TxtBox.Clear();
+            op1TxtBox.ResetText();
+            op2TxtBox.ResetText();
             resultTxtBox.Clear();
             op1TxtBox.Focus();
-            counterFunc = 0;
-            counterOp = 0;
+            // Not sure if this button should reset the counter or not...
+            // counterFunc = 0;
+            // counterOp = 0;
         }
 
         private void subtractBtn_Click(object sender, EventArgs e)
@@ -75,8 +76,8 @@ namespace C01
 
             counterOp += 1;
             op1TxtBox.Focus();
-            op1TxtBox.SelectAll();
-            op2TxtBox.SelectAll();
+            op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
         private void multBtn_Click(object sender, EventArgs e)
@@ -89,22 +90,35 @@ namespace C01
 
             counterOp += 1;
             op1TxtBox.Focus();
-            op1TxtBox.SelectAll();
-            op2TxtBox.SelectAll();
+            op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
-        private void divideBtn_Click(object sender, EventArgs e)
+        public void divideBtn_Click(object sender, EventArgs e)
         {
+            // ool divByZeroStatus = false;
             op1 = Convert.ToDecimal(op1TxtBox.Text);
             op2 = Convert.ToDecimal(op2TxtBox.Text);
+            if (op2 == 0)
+            {
+                bool divByZeroStatus = false;
+                while (divByZeroStatus == false)
+                {
+                    errorBox error = new errorBox();
+                    error.ShowDialog();
+                    op2TxtBox.Value = 1;
+                    op2 = op2TxtBox.Value;
+                    divByZeroStatus = true;
+                }
+            }
             result = op1 / op2;
             roundedResult = Math.Round(result, 3);
             resultTxtBox.Text = roundedResult.ToString();
 
             counterOp += 1;
             op1TxtBox.Focus();
-            op1TxtBox.SelectAll();
-            op2TxtBox.SelectAll();
+            op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
         private void minBtn_Click(object sender, EventArgs e)
@@ -117,8 +131,8 @@ namespace C01
 
             counterFunc += 1;
             op1TxtBox.Focus();
-            op1TxtBox.SelectAll();
-            op2TxtBox.SelectAll();
+            op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
         private void maxBtn_Click(object sender, EventArgs e)
@@ -131,8 +145,8 @@ namespace C01
 
             counterFunc += 1;
             op1TxtBox.Focus();
-            op1TxtBox.SelectAll();
-            op2TxtBox.SelectAll();
+            op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
         private void Sqrt_Click(object sender, EventArgs e)
@@ -145,8 +159,14 @@ namespace C01
 
             counterFunc += 1;
             op1TxtBox.Focus();
-            op1TxtBox.SelectAll();
-            op2TxtBox.SelectAll();
+            op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op2TxtBox.Select(0, op1TxtBox.Text.Length);
+        }
+
+        private void simpleCalcFrm_Load(object sender, EventArgs e)
+        {
+            // op1TxtBox.Select(0, op1TxtBox.Text.Length);
+            op1TxtBox.Focus();
         }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="errorPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="errorPopup.Designer.cs">
+      <DependentUpon>errorPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="simpleCalcFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="errorPopup.resx">
+      <DependentUpon>errorPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="simpleCalcFrm.resx">
       <DependentUpon>simpleCalcFrm.cs</DependentUpon>
     </EmbeddedResource>
