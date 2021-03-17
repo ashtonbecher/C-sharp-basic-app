@@ -16,7 +16,7 @@ namespace C01
     /* Decsription: Windows form that is a basic calculator. Functions such as basic math as well
      as minimum, maximum, and square root also provided */
 
-    public partial class simpleCalcFrm : Form
+    public partial class SimpleCalcFrm : Form
     {
         // Global variable declaration to reduce repetition in code
         int counterFunc = 0;
@@ -26,12 +26,12 @@ namespace C01
         decimal result = 0;
         decimal roundedResult = 0;
 
-        public simpleCalcFrm()
+        public SimpleCalcFrm()
         {
             InitializeComponent();
         }     
 
-        private void exitBtn_Click(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
             String text = "Total number of Operations:\t" + counterOp.ToString() + "\n" + 
                 "Total number of Functions:\t\t" + counterFunc.ToString() + "\n" +
@@ -41,7 +41,7 @@ namespace C01
             this.Close();
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
+        private void AddBtn_Click(object sender, EventArgs e)
         {
             op1 = Convert.ToDecimal(op1TxtBox.Text);
             op2 = Convert.ToDecimal(op2TxtBox.Text);
@@ -55,7 +55,7 @@ namespace C01
             op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
         
-        private void clearBtn_Click(object sender, EventArgs e)
+        private void ClearBtn_Click(object sender, EventArgs e)
         {
             op1TxtBox.ResetText();
             op2TxtBox.ResetText();
@@ -66,7 +66,7 @@ namespace C01
             // counterOp = 0;
         }
 
-        private void subtractBtn_Click(object sender, EventArgs e)
+        private void SubtractBtn_Click(object sender, EventArgs e)
         {
             op1 = Convert.ToDecimal(op1TxtBox.Text);
             op2 = Convert.ToDecimal(op2TxtBox.Text);
@@ -80,7 +80,7 @@ namespace C01
             op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
-        private void multBtn_Click(object sender, EventArgs e)
+        private void MultBtn_Click(object sender, EventArgs e)
         {
             op1 = Convert.ToDecimal(op1TxtBox.Text);
             op2 = Convert.ToDecimal(op2TxtBox.Text);
@@ -94,7 +94,7 @@ namespace C01
             op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
-        public void divideBtn_Click(object sender, EventArgs e)
+        public void DivideBtn_Click(object sender, EventArgs e)
         {
             // ool divByZeroStatus = false;
             op1 = Convert.ToDecimal(op1TxtBox.Text);
@@ -104,7 +104,7 @@ namespace C01
                 bool divByZeroStatus = false;
                 while (divByZeroStatus == false)
                 {
-                    errorBox error = new errorBox();
+                    ErrorBox error = new ErrorBox();
                     error.ShowDialog();
                     op2TxtBox.Value = 1;
                     op2 = op2TxtBox.Value;
@@ -121,7 +121,7 @@ namespace C01
             op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
-        private void minBtn_Click(object sender, EventArgs e)
+        private void MinBtn_Click(object sender, EventArgs e)
         {
             op1 = Convert.ToDecimal(op1TxtBox.Text);
             op2 = Convert.ToDecimal(op2TxtBox.Text);
@@ -135,7 +135,7 @@ namespace C01
             op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
-        private void maxBtn_Click(object sender, EventArgs e)
+        private void MaxBtn_Click(object sender, EventArgs e)
         {
             op1 = Convert.ToDecimal(op1TxtBox.Text);
             op2 = Convert.ToDecimal(op2TxtBox.Text);
@@ -163,7 +163,7 @@ namespace C01
             op2TxtBox.Select(0, op1TxtBox.Text.Length);
         }
 
-        private void simpleCalcFrm_Load(object sender, EventArgs e)
+        private void SimpleCalcFrm_Load(object sender, EventArgs e)
         {
             // op1TxtBox.Select(0, op1TxtBox.Text.Length);
             op1TxtBox.Focus();

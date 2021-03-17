@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace C01
 {
-    public partial class errorBox : Form
+    public partial class ErrorBox : Form
     {
-        public errorBox()
+        public ErrorBox()
         {
             InitializeComponent();
         }
 
-        private void btnErrorOk_Click(object sender, EventArgs e)
+        private void BtnErrorOk_Click(object sender, EventArgs e)
         {
             Close();
         }

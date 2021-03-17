@@ -1,6 +1,6 @@
 ﻿namespace C01
 {
-    partial class simpleCalcFrm
+    partial class SimpleCalcFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -164,7 +164,7 @@
             this.addBtn.TabIndex = 3;
             this.addBtn.Text = "+";
             this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            this.addBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // subtractBtn
             // 
@@ -176,7 +176,7 @@
             this.subtractBtn.TabIndex = 4;
             this.subtractBtn.Text = "-";
             this.subtractBtn.UseVisualStyleBackColor = true;
-            this.subtractBtn.Click += new System.EventHandler(this.subtractBtn_Click);
+            this.subtractBtn.Click += new System.EventHandler(this.SubtractBtn_Click);
             // 
             // multBtn
             // 
@@ -188,7 +188,7 @@
             this.multBtn.TabIndex = 5;
             this.multBtn.Text = "*";
             this.multBtn.UseVisualStyleBackColor = true;
-            this.multBtn.Click += new System.EventHandler(this.multBtn_Click);
+            this.multBtn.Click += new System.EventHandler(this.MultBtn_Click);
             // 
             // divideBtn
             // 
@@ -200,7 +200,7 @@
             this.divideBtn.TabIndex = 6;
             this.divideBtn.Text = "/";
             this.divideBtn.UseVisualStyleBackColor = true;
-            this.divideBtn.Click += new System.EventHandler(this.divideBtn_Click);
+            this.divideBtn.Click += new System.EventHandler(this.DivideBtn_Click);
             // 
             // functionsLbl
             // 
@@ -222,7 +222,7 @@
             this.minBtn.TabIndex = 7;
             this.minBtn.Text = "Min";
             this.minBtn.UseVisualStyleBackColor = true;
-            this.minBtn.Click += new System.EventHandler(this.minBtn_Click);
+            this.minBtn.Click += new System.EventHandler(this.MinBtn_Click);
             // 
             // maxBtn
             // 
@@ -234,7 +234,7 @@
             this.maxBtn.TabIndex = 8;
             this.maxBtn.Text = "Max";
             this.maxBtn.UseVisualStyleBackColor = true;
-            this.maxBtn.Click += new System.EventHandler(this.maxBtn_Click);
+            this.maxBtn.Click += new System.EventHandler(this.MaxBtn_Click);
             // 
             // Sqrt
             // 
@@ -258,7 +258,7 @@
             this.clearBtn.TabIndex = 10;
             this.clearBtn.Text = "&Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
-            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            this.clearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // exitBtn
             // 
@@ -271,7 +271,7 @@
             this.exitBtn.TabIndex = 11;
             this.exitBtn.Text = "E&xit";
             this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.exitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // op1TxtBox
             // 
@@ -320,7 +320,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "simpleCalcFrm";
             this.Text = "Simple Calculator";
-            this.Load += new System.EventHandler(this.simpleCalcFrm_Load);
+            this.Load += new System.EventHandler(this.SimpleCalcFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.op1TxtBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.op2TxtBox)).EndInit();
             this.ResumeLayout(false);

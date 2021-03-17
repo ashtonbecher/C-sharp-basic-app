@@ -16,7 +16,7 @@ namespace C01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new simpleCalcFrm());
+            Application.Run(new SimpleCalcFrm());
         }
     }
 }

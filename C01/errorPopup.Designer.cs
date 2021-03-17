@@ -1,7 +1,7 @@
 ﻿
 namespace C01
 {
-    partial class errorBox
+    partial class ErrorBox
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@ namespace C01
             this.btnErrorOk.TabIndex = 0;
             this.btnErrorOk.Text = "OK";
             this.btnErrorOk.UseVisualStyleBackColor = true;
-            this.btnErrorOk.Click += new System.EventHandler(this.btnErrorOk_Click);
+            this.btnErrorOk.Click += new System.EventHandler(this.BtnErrorOk_Click);
             // 
             // lblError
             // 
